@@ -9,12 +9,14 @@ purchased at their individual pricing or at a discounted price when purchased in
 groups as listed below: For example, item ‘A’ might cost 50 cents individually, but
 this week we have a special offer: buy three ‘A’s and they’ll cost you $1.30. Product
 pricing for this week is as below:
+         
+| Item   | Unit Price    | Special Price   |
+| ------ |:-------------:| ---------------:|
+| A      | 50            | 3 for 130       |
+| B      | 30            | 2 for 45        |
+| C      | 20            |                 |
+| D      | 15            |                 |
 
-Item   Unit Price  Special Price 
-A            50           3 for 130
-B            30           2 for 45
-C            20           
-D            15           
 
 Our checkout accepts items in any order, so that if we scan product B, then product
 A, and then another product B, we’ll recognize the two B’s and price them at a
@@ -25,11 +27,13 @@ Expected output are as follows:
 
 Examples:
 
-INPUT OUTPUT
-""                 0
-"A"                50
-"AB"               80
-"CDBA"             115
+| INPUT  | OUTPUT        |
+| ------ |:-------------:|
+| ""     | 0             |
+| "A"    | 50            |
+| "AB"   | 80            |
+| "CDBA" | 115           |
+
 
 Guidelines for implementing this challenge : 
 1. Use Python3 to solve the problem.
@@ -56,12 +60,8 @@ frontend/              # Frontend application directory
   |-- public/          # Public assets
   |-- src/             # Source code
   |-- package.json     # Node.js dependencies
-  |-- nginx.conf       # Nginx configuration 
 
 docker-compose.yml    # Docker Compose configuration file
-
-
-
 
 README.md              # This file
 
@@ -78,7 +78,7 @@ Node.js and npm (for frontend development)
 Clone the repository:
 
 ```shell
-git clone git@github.com:akshay619-dev/agrichain.git
+git clone https://github.com/akshay619-dev/agrichain.git
 cd agrichain
 ```
 
@@ -88,8 +88,7 @@ Build and run the Docker container:
 docker-compose up --build -d
 ```
 
-
-### OR Setup manually
+### OR Setup Manually
 
 ```shell
 cd backend
@@ -127,7 +126,6 @@ npm run dev
 ```shell
 npm run build
 ```
-
 
 ### Tech Stack Overview
 
