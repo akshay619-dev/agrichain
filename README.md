@@ -113,7 +113,7 @@ python manage.py test checkout.tests
 Navigate to the frontend directory:
 
 ```shell
-cd ../frontend
+cd frontend
 ```
 ## Install dependencies:
 
