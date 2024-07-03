@@ -128,7 +128,7 @@ npm run dev
 
 ### Access the frontend at http://localhost:5173.
 
-![screenshot] (frontend/public/frontend-app.png)
+![plot](./frontend/public/frontend-app.png)
 
 ## Build the frontend application:
 
