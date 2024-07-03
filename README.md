@@ -101,6 +101,13 @@ python manage.py runserver
 
 ### Access the backend API at http://localhost:8000.
 
+### Run Test Cases for Backend API
+
+```shell
+python manage.py test checkout.tests
+```
+
+
 ### Frontend Setup
 
 Navigate to the frontend directory:
@@ -126,6 +133,8 @@ npm run dev
 ```shell
 npm run build
 ```
+
+
 
 ### Tech Stack Overview
 

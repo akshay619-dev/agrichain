@@ -4,16 +4,18 @@ WORKDIR /app
 ENV VITE_APP_URL=http://localhost:5173
 ENV VITE_API_URL=http://localhost:8000
 
-COPY ./frontend/package*.json ./
-
-
+COPY package*.json ./
 
 RUN npm install
 
-COPY ./frontend ./
+COPY . .
 
-# Expose port 3000 to allow communication to/from server
-EXPOSE 3000
+RUN npm run build
+
+COPY dist .
+
+# Expose port 5173 to allow communication to/from server
+EXPOSE 5173
 
 # Command to run when container starts
-CMD ["npm", "start"]
+CMD ["npm", "run" , "dev"]
