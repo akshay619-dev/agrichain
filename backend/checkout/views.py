@@ -8,7 +8,7 @@ checkout = Checkout()
 class AddItemView(APIView):
     def post(self, request):
         global checkout  
-        checkout = Checkout()  
+        checkout = Checkout()
         items_string = request.data.get('items', '')  
         items = list(items_string)  
         for item in items:
