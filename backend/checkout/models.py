@@ -22,11 +22,18 @@ class Checkout:
         }
         self.items = {}
 
+    def validate_item(self, item):
+        if item not in self.products:
+            return "Error: Invalid item"
+           
     def add_item(self, item):
+        if item not in self.products:
+            return False
         if item in self.items:
             self.items[item] += 1
         else:
             self.items[item] = 1
+        return True    
 
     def calculate_total(self):
         total = 0
